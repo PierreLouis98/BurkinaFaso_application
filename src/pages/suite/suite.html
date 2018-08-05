@@ -6,25 +6,56 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-      <button ion-button menuToggle>
+    <ion-navbar>
+        <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
       </button>
-    <ion-title>Simulation</ion-title>
-  </ion-navbar>
+        <ion-title>Simulation</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
+<script>
+    var p1 = 0;
+
+</script>
 
 <ion-content padding>
-<p>
-    <button ion-button round>Question</button>
-</p>
-<p>
-    <button ion-button full>Réponse 1</button>
-    <button ion-button full>Réponse 2</button>
-    <button ion-button full>Réponse 3</button>
-    <button ion-button full>Réponse 4</button>
-</p>
+    <p>
+        <button ion-button round> 2 + 7 = ? </button>
+    </p>
+    <p>
+        <button ion-button full (click)="p1=0">A:  5</button>
+        <button ion-button full (click)="p1=0">B:  8</button>
+        <button ion-button full (click)="p1=1">C:  9</button>
+        <button ion-button full (click)="p1=0">D:  40 672</button>
+    </p>
+    <h3>Ton score est de: <b>{{p1}}</b> </h3>
 
 </ion-content>
+
+
+<!-- CODE POUR UN QCM AVEC AFFICHAGE DES POINTS A LA FIN -->
+<!--
+<html>
+    <head>
+        <script>
+            var p1 = 0;
+            var p2 = 0;
+        </script>
+    </head>
+    <body>
+        <form>
+            1+2 = <br>
+            <input type="radio" name="q1" onclick="p1=0"> 2<br>
+            <input type="radio" name="q1" onclick="p1=1"> 3<br>
+            <br>
+            6x7 = <br>
+            <input type="radio" name="q2" onclick="p2=1"> 42<br>
+            <input type="radio" name="q2" onclick="p2=0"> 49<br>
+            <br>
+            <input type="button" value="Compter les points" onclick="alert((p1+p2)+' points')">
+        </form>
+    </body>
+</html>
+-->

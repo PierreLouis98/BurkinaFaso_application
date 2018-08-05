@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ContactPage } from '../contact/contact';
+import { NavController, NavParams } from 'ionic-angular';
+
 
 @Component({
   selector: 'page-hello-ionic',
