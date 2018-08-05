@@ -20,8 +20,5 @@ export class ContactPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactPage');
   }
-  goBack(){
-        this.navCtrl.pop();
-  } 
 
 }

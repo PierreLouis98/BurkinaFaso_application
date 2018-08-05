@@ -8,7 +8,7 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'hello-ionic.html'
 })
 export class HelloIonicPage {
-  constructor() {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   
   gotoContact(event){
