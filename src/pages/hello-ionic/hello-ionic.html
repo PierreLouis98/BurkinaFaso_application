@@ -1,9 +1,15 @@
 <ion-header>
     <ion-navbar>
-        <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+        <button ion-button menuToggle> <!-- "menuToggle" fait sortir le menu-->
+      <ion-icon name="menu"></ion-icon> <!-- on choisit l'image correspondante-->
     </button>
         <ion-title>Accueil</ion-title>
+        <ion-buttons end>
+            <!-- Pour mettre l'icone à droite -->
+            <button ion-button icon-only (click)="gotoContact($event)">   <!--icon-only--> 
+       <ion-icon name="contact"></ion-icon> <!-- Pour trouver l'icone contact -->
+      </button>
+        </ion-buttons>
     </ion-navbar>
 </ion-header>
 
@@ -12,7 +18,7 @@
 
     <h3>Bonjour à toi producteur !</h3>
     <p>
-        <button ion-button color="primary" menuToggle>Commencer</button>
+        <button ion-button round color="primary" menuToggle>Commencer</button>
     </p>
 
 

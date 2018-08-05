@@ -7,14 +7,15 @@
   </ion-navbar>
 </ion-header>
 
+
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon name="{{item.icon}}" item-left></ion-icon>
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)"> <!-- *ngFor="let item of items" : pour avoir plusieurs ligne et pas qu'une seule ! -->
+      <ion-icon name="{{item.icon}}" item-left></ion-icon>  <!-- Pour tous ce qu'il y a d'écrit sur la ligne (avec l'icone),    d'ici  -->
       {{item.title}}
       <div class="item-note" item-right>
-        {{item.note}}
-      </div>
+        {{item.note}} 
+      </div>                                                 <!-- jusqu'ici -->
     </button>
   </ion-list>
 </ion-content>

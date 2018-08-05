@@ -8,7 +8,7 @@
 
   <ion-content>
     <ion-list>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)"> <!-- Ici, on fait une boucle pour dire: si "Simulation" (dans le menu) est séléctionné, on appelle la fonction "openPage()" qui est dans le fichier .ts-->
         {{p.title}}
       </button>
     </ion-list>
