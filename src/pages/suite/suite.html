@@ -16,7 +16,9 @@
 </ion-header>
 
 <script>
-    var p1 = 0;
+    var p1 = 5;
+    var p2 = 5;
+    var p = 5;
 
 </script>
 
@@ -30,9 +32,41 @@
         <button ion-button full (click)="p1=1">C:  9</button>
         <button ion-button full (click)="p1=0">D:  40 672</button>
     </p>
-    
-    <h3>Ton score est de: <b>{{p1}}</b> </h3>
+    <p>
+        <button ion-button round> 14 - 23 = ? </button>
+    </p>
+    <p>
+        <button ion-button full (click)="p2=0">A:  9</button>
+        <button ion-button full (click)="p2=1">B:  -9</button>
+        <button ion-button full (click)="p2=0">C:  15</button>
+        <button ion-button full (click)="p2=0">D:  1 423</button>
+    </p>
+
+    <h3>Ton score est de: <b>{{p1 + p2}}</b> points</h3>
+
+    <div>
+        <audio controls>
+      <source src="assets/audio/calcul.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    </div>
+
 </ion-content>
+
+
+<!-- PROCHAINES ETAPES:
+
+        -trouver un moyen pour afficher le score seulement si l'utilisateur a donné une réponse pour chaque question et qu'il a validé
+
+-->
+
+
+
+
+
+
+
+
 
 
 <!-- CODE POUR UN QCM AVEC AFFICHAGE DES POINTS A LA FIN -->

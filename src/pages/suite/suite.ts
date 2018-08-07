@@ -21,4 +21,5 @@ export class SuitePage {
     console.log('ionViewDidLoad SuitePage');
   }
 
+
 }
