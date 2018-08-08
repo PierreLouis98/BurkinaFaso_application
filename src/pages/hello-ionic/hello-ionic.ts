@@ -11,7 +11,7 @@ export class HelloIonicPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   
-  gotoContact(event){
+  gotoContact(){
         this.navCtrl.push(ContactPage);
     }
 

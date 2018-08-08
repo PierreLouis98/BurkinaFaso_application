@@ -1,23 +1,22 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+    <ion-navbar>
+        <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Quizz</ion-title>
-  </ion-navbar>
+        <ion-title>Quizz</ion-title>
+    </ion-navbar>
 </ion-header>
 
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)"> <!-- *ngFor="let item of items" : pour avoir plusieurs ligne et pas qu'une seule ! -->
-      <ion-icon name="{{item.icon}}" item-left></ion-icon>  <!-- Pour tous ce qu'il y a d'écrit sur la ligne (avec l'icone),    d'ici  -->
+    <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)"> <!-- *ngFor="let item of items" : pour avoir plusieurs ligne et pas qu'une seule ! -->
+        <!-- On peut aussi remarquer l'appel de la fonction itemTapped() qui se trouve dans le .ts avec un passage par paramètre -->
+<ion-icon name="{{item.icon}}" item-left></ion-icon>  <!-- Pour tous ce qu'il y a d'écrit sur la ligne (avec l'icone),    d'ici  -->
       {{item.title}}
       <div class="item-note" item-right>
         {{item.note}} 
       </div>                                                 <!-- jusqu'ici -->
     </button>
-  </ion-list>
+    </ion-list>
 </ion-content>
-
-
