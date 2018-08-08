@@ -17,8 +17,13 @@ export class ContactPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactPage');
   }
+  
+
 
 }
+
+

@@ -20,6 +20,6 @@ export class SuitePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SuitePage');
   }
-
+  
 
 }
