@@ -10,7 +10,8 @@
         <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
       </button>
-        <ion-title>Simulation</ion-title>
+  <!--      <ion-title>Simulation</ion-title>   -->
+        <ion-title> {{score(p1, p2)}} </ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -24,7 +25,7 @@
 
 <ion-content padding>
     <p>
-        <button ion-button round > 2 + 7 = ? </button>
+        <button ion-button round> 2 + 7 = ? </button>
     </p>
     <p>
         <button ion-button full (click)="p1=0">A:  5</button>
@@ -42,10 +43,12 @@
         <button ion-button full (click)="p2=0">D:  1 423</button>
     </p>
 
-<!--  Affiche le score en faisant la somme en direct des points récolté sur les deux questions -->
-    <h3>Ton score est de: <b>{{p1 + p2}}</b> points</h3>
+    <p>
+        <button ion-button round (click)="score(p1, p2)">Valider</button>
+    </p>
 
-    <div> <!-- ne sert à rien -->
+    <div>
+        <!-- ne sert à rien -->
         <audio controls>
       <source src="assets/audio/calcul.mp3" type="audio/mpeg">
       Your browser does not support the audio element.

@@ -23,19 +23,19 @@ export class ListPage
         'american-football', 'boat', 'bluetooth', 'build'];
 
      /** Tableau de notes */
-        this.note = ['La préparation', 'La semence', 'Le semis', 'Le sarclage', 'Les engrais', 
+        this.notes = ['La préparation', 'La semence', 'Le semis', 'Le sarclage', 'Les engrais', 
         'Les traitements', 'La récolte', 'Le séchage', 'Le battage', 'Le tri', 'La conservation', 
         'Le stockage'];
 
       /** Tableau de titre */
-        this.title = ['Etape '];
+        this.titles = ['Etape '];
 
       /** Tableau d'item contenant le tableau d'icon, de note et de titre */
         this.items = [];
 
 
         for (var i = 0; i < 12; i++)
-            this.items.push({ title: this.title[0] + (i+1), note: this.note[i] , icon: this.icons[4] }); 
+            this.items.push({ title: this.titles[0] + (i+1), note: this.notes[i] , icon: this.icons[4] }); 
 
       }
 

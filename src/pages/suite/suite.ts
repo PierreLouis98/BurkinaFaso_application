@@ -21,5 +21,10 @@ export class SuitePage {
     console.log('ionViewDidLoad SuitePage');
   }
   
+  score(p1, p2) {
+    var resultat = p1 + p2;
+    if((p1 === 1 || p1 === 0) && (p2 === 1 || p2 === 0))
+        return(resultat + ' pts');
+  }
 
 }
