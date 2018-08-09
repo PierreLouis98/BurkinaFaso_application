@@ -11,12 +11,32 @@
 <ion-content>
     <ion-list>
         <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)"> <!-- *ngFor="let item of items" : pour avoir plusieurs ligne et pas qu'une seule ! -->
-        <!-- On peut aussi remarquer l'appel de la fonction itemTapped() qui se trouve dans le .ts avec un passage par paramètre -->
-<ion-icon name="{{item.icon}}" item-left></ion-icon>  <!-- Pour tous ce qu'il y a d'écrit sur la ligne (avec l'icone),    d'ici  -->
-      {{item.title}}
+<!-- On peut aussi remarquer l'appel de la fonction itemTapped() qui se trouve dans le .ts avec un passage par paramètre -->
+
+<ion-icon name="volume-up" item-left></ion-icon> <!-- On place (à gauche) l'icone du nom de {{item.icon}} (on accède au tableau de tableau)-->
+{{item.title}}
       <div class="item-note" item-right>
         {{item.note}} 
-      </div>                                                 <!-- jusqu'ici -->
-    </button>
+</div>
+</button>
     </ion-list>
 </ion-content>
+
+
+<!--
+<ion-list>
+    <ion-item>
+        <button>
+      <ion-icon ion-button item-start name="volume-up"></ion-icon>
+    </button>
+
+        <h2>Le choix de la semance</h2>
+        <p>Etape 4</p>
+    </ion-item>
+</ion-list>
+
+-->
+
+<!--
+ name="{{item.icon}}"
+-->
