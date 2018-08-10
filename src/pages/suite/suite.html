@@ -11,46 +11,41 @@
           <ion-icon name="menu"></ion-icon>
       </button>
         <!--      <ion-title>Simulation</ion-title>   -->
-    <!--    <ion-title> {{score(p1, p2)}} </ion-title> -->
+        <!--    <ion-title> {{score(p1, p2)}} </ion-title> -->
     </ion-navbar>
 
 </ion-header>
 
-<script>
-    var p1 = 5;
-    var p2 = 5;
-    var p = 5;
 
-</script>
 
 <ion-content padding>
-    
+
     <form (submit)="doSubmit($event)" [formGroup]="langForm">
-    <ion-list radio-group formControlName="langs">
+        <ion-list radio-group formControlName="langs" [(ngModel)]="actor">
 
-  
-        <ion-list-header>
-            2 + 7 = ?
-        </ion-list-header>
 
-        <ion-item>
-            <ion-label>A: 5</ion-label>
-            <ion-radio value="5"></ion-radio>
-        </ion-item>
-        <ion-item>
-            <ion-label>B: 8</ion-label>
-            <ion-radio value="8"></ion-radio>
-        </ion-item>
-        <ion-item>
-            <ion-label>C: 9</ion-label>
-            <ion-radio value="9"></ion-radio>
-        </ion-item>
-        <ion-item>
-            <ion-label>D: 40 672</ion-label>
-            <ion-radio value="40 672"></ion-radio>
-        </ion-item>
-    </ion-list>
-        </form>
+            <ion-list-header>
+                2 + 7 = ?
+            </ion-list-header>
+
+            <ion-item>
+                <ion-label>A: 5</ion-label>
+                <ion-radio value="5"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>B: 8</ion-label>
+                <ion-radio value="8"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>C: 9</ion-label>
+                <ion-radio value="9"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>D: 40 672</ion-label>
+                <ion-radio value="40 672"></ion-radio>
+            </ion-item>
+        </ion-list>
+    </form>
 
     <!--<p>
         <button ion-button round> 14 - 23 = ? </button>
@@ -62,7 +57,12 @@
         <button ion-button full (click)="p2=0">D:  1 423</button>
     </p>
 -->
-        <button ion-button round (click)="showAlert()">Valider</button>
+    <ion-row>
+        <ion-col width-50 style="text-align: center">
+            <button ion-button round (click)="showAlert()">Valider</button>
+        </ion-col>
+    </ion-row>
+
 
     <div>
         <audio controls>
@@ -75,7 +75,7 @@
 
 
 
-    <!-- PROCHAINES ETAPES:
+<!-- PROCHAINES ETAPES:
 
         -trouver un moyen pour afficher le score seulement si l'utilisateur a donné une réponse pour chaque question et qu'il a validé
 
@@ -86,8 +86,8 @@
 
 
 
-    <!-- CODE POUR UN QCM AVEC AFFICHAGE DES POINTS A LA FIN -->
-    <!--
+<!-- CODE POUR UN QCM AVEC AFFICHAGE DES POINTS A LA FIN -->
+<!--
 <html>
     <head>
         <script>

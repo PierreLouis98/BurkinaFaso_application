@@ -2,11 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams} from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
-import {
-  FormGroup,
-  FormControl
-
-} from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 
 @Component({
@@ -18,30 +14,32 @@ export class SuitePage {
   langForm;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController ) {
-   this.langForm = new FormGroup({
-      "langs": new FormControl({value: 'rust', disabled: false})
-    });
+  
+    this.langForm = new FormGroup({
+      "langs": new FormControl({value: '5', disabled: false}, {value: '8', disabled: false}, {value: '9', disabled: false}, {value: '40 672', disabled: false})
+                                  });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SuitePage');
   }
   
- score(p1, p2) {
-    var resultat = p1 + p2;
-    if((p1 === 1 || p1 === 0) && (p2 === 1 || p2 === 0))
-        return(resultat + ' pts');
-    }
+
         
  showAlert() {
-    let alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      message: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+ var resul = this.actor;
+if(resul === '9')
+        resul = '1 pt';
+    else
+        resul = '0 pt';
+    let alert = this.alerCtrl.create({
+      title: resul,
       buttons: ['OK']
     });
     alert.present()
   }
   
+
   
   doSubmit(event) {
     console.log('Submitting form', this.langForm.value);
@@ -49,3 +47,5 @@ export class SuitePage {
   }
 
 }
+
+
