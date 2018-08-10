@@ -1,4 +1,4 @@
- <ion-header>
+<ion-header>
     <ion-navbar>
         <button ion-button menuToggle> <!-- "menuToggle" fait sortir le menu-->
       <ion-icon name="menu"></ion-icon> <!-- on choisit l'image correspondante-->
@@ -14,15 +14,38 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content overflow-scroll="false" class="weather-home" padding>
 
-    <h3>Bonjour à toi producteur !</h3>
-    <p>
-        <button ion-button round color="primary" menuToggle>Commencer</button>
-    </p>
 
+    <h3 text-center>Bonjour à toi producteur !</h3>
+
+
+    <ion-row>
+        <ion-col width-50 style="text-align: center">
+            <button ion-button round color="primary" menuToggle>Commencer</button>
+        </ion-col>
+    </ion-row>
+
+        <h3 text-center>Langue:</h3>
+    <ion-row>
+        <ion-col width-50 style="text-align: right">
+            <button ion-button round>Mooré</button>
+        </ion-col>
+        <ion-col width-50 style="text-align: left">
+            <button ion-button round>Francais</button>
+        </ion-col>
+    </ion-row>
 
 </ion-content>
 
-<ion-content overflow-scroll="false" class="weather-home">
 
+<!--    PROBLEME RESTANT A REGLER:
+
+    -QUALITE DE L'IMAGE DE FOND D'ECRAN
+
+    -POUR LA LANGUE, REGARDER POPOVERS DANS COMPONENT
+
+    -POUR LES BOUTONS, REGARDER TOOLBAR (BUTTONS IN TOOLBARS) DANS COMPONENT, OU BUTTONS IN COMPONENT
+
+    -POUR LE FOND D'ECRAN, REGARDER CARDS, Background Images IN COMPONENT (PEUT AUSSI SERVIR D'IDEE POUR LE SECOND MENU)
+-->

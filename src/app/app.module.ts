@@ -9,6 +9,7 @@ import { ListPage } from '../pages/list/list';
 import { SuitePage } from '../pages/suite/suite';
 import { ContactPage } from '../pages/contact/contact';
 
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 

@@ -10,7 +10,7 @@
         <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
       </button>
-  <!--      <ion-title>Simulation</ion-title>   -->
+        <!--      <ion-title>Simulation</ion-title>   -->
         <ion-title> {{score(p1, p2)}} </ion-title>
     </ion-navbar>
 
@@ -24,15 +24,14 @@
 </script>
 
 <ion-content padding>
-    <p>
-        <button ion-button round> 2 + 7 = ? </button>
-    </p>
-    <p>
-        <button ion-button full (click)="p1=0">A:  5</button>
-        <button ion-button full (click)="p1=0">B:  8</button>
-        <button ion-button full (click)="p1=1">C:  9</button>
-        <button ion-button full (click)="p1=0">D:  40 672</button>
-    </p>
+
+    <button ion-button round> 2 + 7 = ? </button>
+
+
+    <button ion-button full (click)="p1=0">A:  5</button>
+    <button ion-button full (click)="p1=0">B:  8</button>
+    <button ion-button full (click)="p1=1">C:  9</button>
+    <button ion-button full (click)="p1=0">D:  40 672</button>
     <p>
         <button ion-button round> 14 - 23 = ? </button>
     </p>
@@ -46,21 +45,24 @@
     <p>
         <button ion-button round (click)="score(p1, p2)">Valider</button>
     </p>
-
+    <!-- ne sert à rien 
     <div>
-        <!-- ne sert à rien -->
-        <audio controls>
+       <audio controls>
       <source src="assets/audio/calcul.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    </div>
-
+    </div> 
+-->
 </ion-content>
 
 
 <!-- PROCHAINES ETAPES:
 
         -trouver un moyen pour afficher le score seulement si l'utilisateur a donné une réponse pour chaque question et qu'il a validé
+
+        -POUR AVOIR UNE SEULE REPONSE, REGARDER RADIOS DANS COMPONENT
+
+        -POUR AFFICHER LE RESULTAT, REGARDER ALERTS DANS COMPONENT
 
 -->
 

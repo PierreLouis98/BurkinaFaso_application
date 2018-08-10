@@ -13,6 +13,8 @@ import { ItemDetailsPage } from '../item-details/item-details';
 export class ListPage 
 {
   icons: string[];
+  titles: string[];
+  notes: string[];
   items: Array<{title: string, note: string, icon: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) 

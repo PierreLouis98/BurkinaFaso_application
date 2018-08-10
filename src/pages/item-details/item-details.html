@@ -3,11 +3,11 @@
         <button menuToggle *ngIf="!selectedItem">
       <ion-icon name="menu"></ion-icon>
     </button>
-        <ion-title>Item Details</ion-title>
+        <ion-title>{{selectedItem.note}}</ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content overflow-scroll="false" class="sarclage">
     <h3 text-center *ngIf="selectedItem">
         {{selectedItem.title}}
         <ion-icon [name]="selectedItem.icon"></ion-icon>
@@ -39,7 +39,7 @@
     <p>
         <button ion-button full>Réponse 1</button>
         <button ion-button full>Réponse 2</button>
-        <button ion-button full>Réponse 3</button>
+        <button ion-button full>Réponse 3</button> 
         <button ion-button full>Réponse 4</button>
     </p>
 
@@ -47,3 +47,9 @@
         <button ion-button round>Valider</button>
     </p>
 </ion-content>
+
+<!--     
+
+        -REGARDER L'ONGLET NAVIGATION DANS COMPONENT
+
+-->
