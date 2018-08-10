@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
+import { NavController, NavParams} from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 import {
   FormGroup,
@@ -8,20 +8,16 @@ import {
 
 } from '@angular/forms';
 
-/**
- * Generated class for the SuitePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-suite',
   templateUrl: 'suite.html',
 })
 export class SuitePage {
+  langs;
+  langForm;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController ) {
    this.langForm = new FormGroup({
       "langs": new FormControl({value: 'rust', disabled: false})
     });
@@ -35,6 +31,15 @@ export class SuitePage {
     var resultat = p1 + p2;
     if((p1 === 1 || p1 === 0) && (p2 === 1 || p2 === 0))
         return(resultat + ' pts');
+    }
+        
+ showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      message: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present()
   }
   
   
