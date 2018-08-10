@@ -24,15 +24,35 @@
 </script>
 
 <ion-content padding>
+    
+    <form (submit)="doSubmit($event)" [formGroup]="langForm">
+    <ion-list radio-group formControlName="langs">
 
-    <button ion-button round> 2 + 7 = ? </button>
+  
+        <ion-list-header>
+            2 + 7 = ?
+        </ion-list-header>
 
+        <ion-item>
+            <ion-label>A: 5</ion-label>
+            <ion-radio value="5"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>B: 8</ion-label>
+            <ion-radio value="8"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>C: 9</ion-label>
+            <ion-radio value="9"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>D: 40 672</ion-label>
+            <ion-radio value="40 672"></ion-radio>
+        </ion-item>
+    </ion-list>
+        </form>
 
-    <button ion-button full (click)="p1=0">A:  5</button>
-    <button ion-button full (click)="p1=0">B:  8</button>
-    <button ion-button full (click)="p1=1">C:  9</button>
-    <button ion-button full (click)="p1=0">D:  40 672</button>
-    <p>
+    <!--<p>
         <button ion-button round> 14 - 23 = ? </button>
     </p>
     <p>
@@ -45,18 +65,19 @@
     <p>
         <button ion-button round (click)="score(p1, p2)">Valider</button>
     </p>
-    <!-- ne sert à rien 
+
     <div>
-       <audio controls>
+        <audio controls>
       <source src="assets/audio/calcul.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    </div> 
--->
+    </div>-->
 </ion-content>
 
 
-<!-- PROCHAINES ETAPES:
+
+
+    <!-- PROCHAINES ETAPES:
 
         -trouver un moyen pour afficher le score seulement si l'utilisateur a donné une réponse pour chaque question et qu'il a validé
 
@@ -68,15 +89,8 @@
 
 
 
-
-
-
-
-
-
-
-<!-- CODE POUR UN QCM AVEC AFFICHAGE DES POINTS A LA FIN -->
-<!--
+    <!-- CODE POUR UN QCM AVEC AFFICHAGE DES POINTS A LA FIN -->
+    <!--
 <html>
     <head>
         <script>
