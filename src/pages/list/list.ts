@@ -15,7 +15,8 @@ export class ListPage
   icons: string[];
   titles: string[];
   notes: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  questions: string[];
+  items: Array<{title: string, note: string, icon: string, question}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) 
       {
@@ -31,13 +32,20 @@ export class ListPage
 
       /** Tableau de titre */
         this.titles = ['Etape '];
+        
+      /** Tableau de question */
+        this.questions = [
+        'Le blé, où le moud-t-on ?',
+        '14 +12 = ?',
+        'Bonjour ?'
+        ];
 
       /** Tableau d'item contenant le tableau d'icon, de note et de titre */
         this.items = [];
 
 
         for (var i = 0; i < 12; i++)
-            this.items.push({ title: this.titles[0] + (i+1), note: this.notes[i] , icon: this.icons[4] }); 
+            this.items.push({ title: this.titles[0] + (i+1), note: this.notes[i] , icon: this.icons[4], question: this.questions[i] }); 
 
       }
 
