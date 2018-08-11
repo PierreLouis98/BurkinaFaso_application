@@ -11,38 +11,57 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class SuitePage {
   langs;
-  langForm;
+  langs2;
+  question;
+  question2;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController ) {
   
-    this.langForm = new FormGroup({
-      "langs": new FormControl({value: '5', disabled: false}, {value: '8', disabled: false}, {value: '9', disabled: false}, {value: '40 672', disabled: false})
-                                  });
+    this.question = new FormGroup({
+      "langs": new FormControl({value: '5', disabled: false})
+      })
+      this.question2 = new FormGroup({
+      "langs2": new FormControl({value: '5', disabled: false})
+      })
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SuitePage');
   }
   
+  message_audio() {
+    src="assets/audio/calcul.mp3" 
+    type="audio/mpeg"
+  }
 
         
- showAlert() {
- var resul = this.actor;
-if(resul === '9')
-        resul = '1 pt';
+ showAlert() 
+ {
+     var resul1 = Number(this.actor);
+     var resul2 = Number(this.actor2);
+     var resul = resul1 + resul2;
+     
+     if (resul1 === 9 && resul2 === -9)
+        resul = Number(2) + 'pts';
+    else if ((resul1 === 9 && resul2 !== -9) || (resul1 !== 9 && resul2 === -9))
+        resul = Number(1) + 'pt';
     else
-        resul = '0 pt';
-    let alert = this.alerCtrl.create({
-      title: resul,
-      buttons: ['OK']
-    });
-    alert.present()
+        resul = Number(0) + 'pt';
+        
+        let alert = this.alerCtrl.create(
+        {
+          title: resul,
+          buttons: ['OK']
+        });
+        
+        alert.present()
   }
   
 
   
   doSubmit(event) {
-    console.log('Submitting form', this.langForm.value);
+    console.log('Submitting form', this.question.value);
+    console.log('Submitting form', this.question2.value);
     event.preventDefault();
   }
 

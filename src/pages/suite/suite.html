@@ -20,12 +20,12 @@
 
 <ion-content padding>
 
-    <form (submit)="doSubmit($event)" [formGroup]="langForm">
+    <form (submit)="doSubmit($event)" [formGroup]="question">
         <ion-list radio-group formControlName="langs" [(ngModel)]="actor">
 
 
             <ion-list-header>
-                2 + 7 = ?
+                <button ion-button round (click)="message_audio()"> 2 + 7 = ?</button>
             </ion-list-header>
 
             <ion-item>
@@ -43,6 +43,33 @@
             <ion-item>
                 <ion-label>D: 40 672</ion-label>
                 <ion-radio value="40 672"></ion-radio>
+            </ion-item>
+        </ion-list>
+    </form>
+
+    <form (submit)="doSubmit($event)" [formGroup]="question2">
+        <ion-list radio-group formControlName="langs2" [(ngModel)]="actor2">
+
+
+            <ion-list-header>
+                14 - 23 = ?
+            </ion-list-header>
+
+            <ion-item>
+                <ion-label>A: 9</ion-label>
+                <ion-radio value="9"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>B: 10</ion-label>
+                <ion-radio value="10"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>C: 15</ion-label>
+                <ion-radio value="15"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>D: -9</ion-label>
+                <ion-radio value="-9"></ion-radio>
             </ion-item>
         </ion-list>
     </form>
