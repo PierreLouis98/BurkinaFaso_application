@@ -13,6 +13,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -42,3 +44,5 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ]
 })
 export class AppModule {}
+
+

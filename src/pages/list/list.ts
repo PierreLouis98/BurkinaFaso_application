@@ -15,12 +15,14 @@ export class ListPage
   icons: string[];
   titles: string[];
   notes: string[];
-  questions: string[];
-  items: Array<{title: string, note: string, icon: string, question}>;
+  questions: string[][][];
+  
+  items: Array<{title: string, note: string, icon: string, question: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) 
       {
 
+/** TABLEAU A UNE DIMENSION */
       /** Tableau d'icon */
         this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
         'american-football', 'boat', 'bluetooth', 'build'];
@@ -33,16 +35,18 @@ export class ListPage
       /** Tableau de titre */
         this.titles = ['Etape '];
         
-      /** Tableau de question */
-        this.questions = [
-        'Le blé, où le moud-t-on ?',
-        '14 +12 = ?',
-        'Bonjour ?'
-        ];
-
+/** TABLEAU A TROIS DIMENSIONS */
+        /** Tableau de question */
+        this.questions = [[['1. Quels sols pour le niébé pluvial ? ','A. Les sols sableux-limoneux bien drainés conviennent au niébé','B.  On peut cultiver le niébé dans les  bas fond','C. Le niébé tolère les sols trop humides ','D. Toutes les réponses précédentes sont vraies xx'],['Q2','R1','R2','R3','R4'], ['Q3','R1','R2','R3','R4']],
+                            [['Q1','étape2','R2','R3','R4'],['Q2','R1','R2','R3','R4'], ['Q3','R1','R2','R3','R4']],
+                            [['Q1','étape3','R2','R3','R4'],['Q2','R1','R2','R3','R4'], ['Q3','R1','R2','R3','R4']],
+                            [['Q1','étape4','R2','R3','R4'],['Q2','R1','R2','R3','R4'], ['Q3','R1','R2','R3','R4']]
+                        ];
+                   
+/** TABLEAU A DEUX DIMENSIONS */
+        
       /** Tableau d'item contenant le tableau d'icon, de note et de titre */
         this.items = [];
-
 
         for (var i = 0; i < 12; i++)
             this.items.push({ title: this.titles[0] + (i+1), note: this.notes[i] , icon: this.icons[4], question: this.questions[i] }); 
@@ -59,6 +63,7 @@ export class ListPage
             this.navCtrl.push(ItemDetailsPage, {item: item});
      }
 }
+
 
 
 
