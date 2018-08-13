@@ -14,6 +14,8 @@ export class SuitePage {
   langs2;
   question;
   question2;
+  actor;
+  actor2;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController ) {
   
@@ -29,24 +31,20 @@ export class SuitePage {
     console.log('ionViewDidLoad SuitePage');
   }
   
-  message_audio() {
-    src="assets/audio/calcul.mp3" 
-    type="audio/mpeg"
-  }
 
         
  showAlert() 
  {
      var resul1 = Number(this.actor);
      var resul2 = Number(this.actor2);
-     var resul = resul1 + resul2;
+     var resul;
      
      if (resul1 === 9 && resul2 === -9)
-        resul = Number(2) + 'pts';
+        resul = '2 pts';
     else if ((resul1 === 9 && resul2 !== -9) || (resul1 !== 9 && resul2 === -9))
-        resul = Number(1) + 'pt';
+        resul = '1 pt';
     else
-        resul = Number(0) + 'pt';
+        resul = '0 pt';
         
         let alert = this.alerCtrl.create(
         {

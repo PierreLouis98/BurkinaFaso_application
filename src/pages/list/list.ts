@@ -17,7 +17,7 @@ export class ListPage
   notes: string[];
   questions: string[][][];
   
-  items: Array<{title: string, note: string, icon: string, question: string}>;
+  items: Array<{title: string, note: string, icon: string, question: string[][]}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) 
       {
