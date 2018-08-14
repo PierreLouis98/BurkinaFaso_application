@@ -17,76 +17,99 @@
     </h4>
 
 
-    <form (submit)="doSubmit($event)" [formGroup]="question">
-        <ion-list radio-group formControlName="langs" [(ngModel)]="actor">
+   
+        <ion-list radio-group [(ngModel)]="actor">
             <button ion-button round> {{selectedItem.question[0][0]}}</button>
             <ion-item>
                 <ion-label>{{selectedItem.question[0][1]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[0][1]}}"></ion-radio>
+                <ion-radio value="1"></ion-radio>
             </ion-item>
             <ion-item>
                 <ion-label>{{selectedItem.question[0][2]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[0][2]}}"></ion-radio>
+                <ion-radio value="2"></ion-radio>
             </ion-item>
             <ion-item>
                 <ion-label>{{selectedItem.question[0][3]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[0][3]}}"></ion-radio>
+                <ion-radio value="3"></ion-radio>
             </ion-item>
             <ion-item>
                 <ion-label>{{selectedItem.question[0][4]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[0][4]}}"></ion-radio>
+                <ion-radio value="4"></ion-radio>
             </ion-item>
         </ion-list>
-    </form>
-
-    <form (submit)="doSubmit($event)" [formGroup]="question2">
-        <ion-list radio-group formControlName="langs" [(ngModel)]="actor2">
+   
+ 
+        <ion-list radio-group  [(ngModel)]="actor2">
             <button ion-button round> {{selectedItem.question[1][0]}}</button>
             <ion-item>
                 <ion-label>{{selectedItem.question[1][1]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[1][1]}}"></ion-radio>
+                <ion-radio value="1"></ion-radio>
             </ion-item>
             <ion-item>
                 <ion-label>{{selectedItem.question[1][2]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[1][2]}}"></ion-radio>
+                <ion-radio value="2"></ion-radio>
             </ion-item>
             <ion-item>
                 <ion-label>{{selectedItem.question[1][3]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[1][3]}}"></ion-radio>
+                <ion-radio value="3"></ion-radio>
             </ion-item>
             <ion-item>
                 <ion-label>{{selectedItem.question[1][4]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[1][4]}}"></ion-radio>
+                <ion-radio value="4"></ion-radio>
             </ion-item>
         </ion-list>
-    </form>
+  
 
-    <form (submit)="doSubmit($event)" [formGroup]="question3">
-        <ion-list radio-group formControlName="langs" [(ngModel)]="actor3">
+  
+        <ion-list radio-group [(ngModel)]="actor3">
             <button ion-button round> {{selectedItem.question[2][0]}}</button>
             <ion-item>
                 <ion-label>{{selectedItem.question[2][1]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[2][1]}}"></ion-radio>
+                <ion-radio value="1"></ion-radio>
             </ion-item>
             <ion-item>
                 <ion-label>{{selectedItem.question[2][2]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[2][2]}}"></ion-radio>
+                <ion-radio value="2"></ion-radio>
             </ion-item>
             <ion-item>
                 <ion-label>{{selectedItem.question[2][3]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[2][3]}}"></ion-radio>
+                <ion-radio value="3"></ion-radio>
             </ion-item>
             <ion-item>
                 <ion-label>{{selectedItem.question[2][4]}}</ion-label>
-                <ion-radio value="{{selectedItem.question[2][4]}}"></ion-radio>
+                <ion-radio value="4"></ion-radio>
             </ion-item>
         </ion-list>
-    </form>
+
+    
+ 
+        <ion-list radio-group [(ngModel)]="actor4">
+            <button ion-button round> {{selectedItem.question[3][0]}}</button>
+            <ion-item>
+                <ion-label>{{selectedItem.question[3][1]}}</ion-label>
+                <ion-radio value="1"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>{{selectedItem.question[3][2]}}</ion-label>
+                <ion-radio value="2"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>{{selectedItem.question[3][3]}}</ion-label>
+                <ion-radio value="3"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>{{selectedItem.question[3][4]}}</ion-label>
+                <ion-radio value="4"></ion-radio>
+            </ion-item>
+        </ion-list>
 
 
-    <p>
-        <button ion-button round>Valider</button>
-    </p>
+  
+        <ion-row>
+        <ion-col width-50 style="text-align: center">
+            <button ion-button round (click)="showAlert(selectedItem.ind)">Valider</button>
+        </ion-col>
+    </ion-row>
 </ion-content>
 
 <!--
@@ -101,4 +124,10 @@
         <button ion-button full>{{selectedItem.question[0][4]}}</button>
     </p>
 
+-->
+
+<!--
+
+        PROCHAINES ETAPES:
+                                -ACTIVER/DESACTIVER LE BOUTON VALIDER
 -->

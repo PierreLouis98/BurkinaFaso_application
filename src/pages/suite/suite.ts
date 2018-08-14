@@ -10,21 +10,13 @@ import { FormGroup, FormControl } from '@angular/forms';
   templateUrl: 'suite.html',
 })
 export class SuitePage {
-  langs;
-  langs2;
-  question;
-  question2;
+
   actor;
   actor2;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alerCtrl: AlertController ) {
   
-    this.question = new FormGroup({
-      "langs": new FormControl({value: '5', disabled: false})
-      })
-      this.question2 = new FormGroup({
-      "langs2": new FormControl({value: '5', disabled: false})
-      })
+
   }
 
   ionViewDidLoad() {
@@ -40,11 +32,9 @@ export class SuitePage {
      var resul;
      
      if (resul1 === 9 && resul2 === -9)
-        resul = '2 pts';
-    else if ((resul1 === 9 && resul2 !== -9) || (resul1 !== 9 && resul2 === -9))
-        resul = '1 pt';
+        resul = 'Gagné !';
     else
-        resul = '0 pt';
+        resul = 'Perdu !';
         
         let alert = this.alerCtrl.create(
         {
@@ -56,12 +46,7 @@ export class SuitePage {
   }
   
 
-  
-  doSubmit(event) {
-    console.log('Submitting form', this.question.value);
-    console.log('Submitting form', this.question2.value);
-    event.preventDefault();
-  }
+
 
 }
 

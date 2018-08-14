@@ -1,9 +1,4 @@
-<!--
-  Generated template for the SuitePage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
     <ion-navbar>
@@ -20,12 +15,12 @@
 
 <ion-content padding>
 
-    <form (submit)="doSubmit($event)" [formGroup]="question">
-        <ion-list radio-group formControlName="langs" [(ngModel)]="actor">
+    
+        <ion-list radio-group  [(ngModel)]="actor">
 
 
             <ion-list-header>
-                <button ion-button round (click)="message_audio()"> 2 + 7 = ?</button>
+                <button ion-button round> 2 + 7 = ?</button>
             </ion-list-header>
 
             <ion-item>
@@ -45,10 +40,10 @@
                 <ion-radio value="40 672"></ion-radio>
             </ion-item>
         </ion-list>
-    </form>
+   
 
-    <form (submit)="doSubmit($event)" [formGroup]="question2">
-        <ion-list radio-group formControlName="langs2" [(ngModel)]="actor2">
+
+        <ion-list radio-group [(ngModel)]="actor2">
 
 
             <ion-list-header>
@@ -72,18 +67,9 @@
                 <ion-radio value="-9"></ion-radio>
             </ion-item>
         </ion-list>
-    </form>
 
-    <!--<p>
-        <button ion-button round> 14 - 23 = ? </button>
-    </p>
-    <p>
-        <button ion-button full (click)="p2=0">A:  9</button>
-        <button ion-button full (click)="p2=1">B:  -9</button>
-        <button ion-button full (click)="p2=0">C:  15</button>
-        <button ion-button full (click)="p2=0">D:  1 423</button>
-    </p>
--->
+
+
     <ion-row>
         <ion-col width-50 style="text-align: center">
             <button ion-button round (click)="showAlert()">Valider</button>
@@ -93,8 +79,8 @@
 
     <div>
         <audio controls>
-      <source src="assets/audio/calcul.mp3" type="audio/mpeg">
-    </audio>
+            <source src="assets/audio/calcul.mp3" type="audio/mpeg">
+        </audio>
     </div>
 </ion-content>
 
@@ -135,4 +121,16 @@
         </form>
     </body>
 </html>
+-->
+
+<!--    CODE POUR LA LISTE DES BOUTONS AVANT CHECKBOX
+<p>
+        <button ion-button round> 14 - 23 = ? </button>
+    </p>
+    <p>
+        <button ion-button full (click)="p2=0">A:  9</button>
+        <button ion-button full (click)="p2=1">B:  -9</button>
+        <button ion-button full (click)="p2=0">C:  15</button>
+        <button ion-button full (click)="p2=0">D:  1 423</button>
+    </p>
 -->
