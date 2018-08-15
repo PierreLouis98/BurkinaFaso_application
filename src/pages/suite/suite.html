@@ -15,17 +15,20 @@
 
 <ion-content padding>
 
-    
+     <ion-slides pager>
+         
+         <ion-slide>
         <ion-list radio-group  [(ngModel)]="actor">
 
-
+    <h2>Question 1</h2>
             <ion-list-header>
-                <button ion-button round> 2 + 7 = ?</button>
+            
+            <button ion-button large round > 2 + 7 = ?</button>
             </ion-list-header>
 
             <ion-item>
                 <ion-label>A: 5</ion-label>
-                <ion-radio value="5"></ion-radio>
+                <ion-radio value="5" (click)="showAlert()"></ion-radio>
             </ion-item>
             <ion-item>
                 <ion-label>B: 8</ion-label>
@@ -41,14 +44,17 @@
             </ion-item>
         </ion-list>
    
-
-
+</ion-slide>
+<ion-slide>
+    
+    <h2>Question 2</h2>
         <ion-list radio-group [(ngModel)]="actor2">
 
 
             <ion-list-header>
-                14 - 23 = ?
+                <button ion-button large round > 14 - 23 = ?</button>
             </ion-list-header>
+            
 
             <ion-item>
                 <ion-label>A: 9</ion-label>
@@ -68,20 +74,27 @@
             </ion-item>
         </ion-list>
 
+  </ion-slide>
 
 
+
+
+</ion-slides>
+
+<!--
     <ion-row>
         <ion-col width-50 style="text-align: center">
             <button ion-button round (click)="showAlert()">Valider</button>
         </ion-col>
     </ion-row>
-
-
+-->
+<!--
     <div>
         <audio controls>
             <source src="assets/audio/calcul.mp3" type="audio/mpeg">
         </audio>
     </div>
+-->
 </ion-content>
 
 

@@ -29,7 +29,7 @@ export class ItemDetailsPage {
 
   }
   
-   showAlert(i) 
+showAlert(i) 
  {
      var r1 = this.actor;
      var r2 = this.actor2;
@@ -50,16 +50,27 @@ export class ItemDetailsPage {
           buttons: ['OK']
         });
         
-        alert.present()
+        alert.present();
+  }
+ showPopup()
+ {
+              // An alert dialog
+      $scope.showAlert = function() {
+        var alertPopup = $ionicPopup.alert({
+          title: 'Ionic Popup',
+          template: 'This is alert popup',
+        });
+        alertPopup.then(function(res) {
+          console.log('Thanks');
+        });
+      };
   }
   
   doSubmit(event) {
 
     event.preventDefault();
   }
-}
-
-
+} 
 
 
 /** IDEE: FAIRE UN TABLEAU DE RESULTAT DANS ITEM */

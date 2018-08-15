@@ -8,13 +8,13 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content class="weather-home" padding>
     <ion-list>
         <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)"> <!-- *ngFor="let item of items" : pour avoir plusieurs ligne  -->
 
 
 <ion-icon name="volume-up" item-left></ion-icon> <!-- On place (à gauche) l'icone du nom de {{item.icon}} (on accède au tableau de tableau)-->
-{{item.ind}}
+{{item.title}}
       <div class="item-note" item-right>
         {{item.note}} 
           
