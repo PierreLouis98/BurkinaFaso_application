@@ -9,13 +9,16 @@
 
 
 <ion-content class="weather-home" padding>
+    <audio controls>
+          <source src="assets/audio/quizz.mp3" type="audio/mpeg">
+    </audio>
     <ion-list>
         <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)"> <!-- *ngFor="let item of items" : pour avoir plusieurs ligne  -->
 
 
 <ion-icon name="volume-up" item-left></ion-icon> <!-- On place (à gauche) l'icone du nom de {{item.icon}} (on accède au tableau de tableau)-->
 {{item.title}}
-      <div class="item-note" item-right>
+<div class="item-note" item-right>
         {{item.note}} 
           
 </div>

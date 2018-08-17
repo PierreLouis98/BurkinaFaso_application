@@ -46,25 +46,13 @@ showAlert(i)
         
         let alert = this.alerCtrl.create(
         {
-          title: gagne,
+          title: 'Score ',
+          subTitle: gagne,
           buttons: ['OK']
         });
         
         alert.present();
-  }
- showPopup()
- {
-              // An alert dialog
-      $scope.showAlert = function() {
-        var alertPopup = $ionicPopup.alert({
-          title: 'Ionic Popup',
-          template: 'This is alert popup',
-        });
-        alertPopup.then(function(res) {
-          console.log('Thanks');
-        });
-      };
-  }
+  } 
   
   doSubmit(event) {
 
